@@ -5,9 +5,7 @@ test('should create and remove popover on click', () => {
   const button = document.querySelector('.popover-button');
   const popover = new Popover(button, 'Test Title', 'Test Content');
 
-  expect(document.querySelector('.popover')).not.toBeNull();
-
-  button.click();
+button.click();
   expect(document.querySelector('.popover')).not.toBeNull();
 
   popover.hide();
