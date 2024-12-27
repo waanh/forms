@@ -4,6 +4,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const ASSET_PATH = process.env.NODE_ENV === 'production' ? './' : '/';
 
 module.exports = {
+  mode: 'development',
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -21,11 +22,9 @@ module.exports = {
       },
       {
         test: /\.html$/,
-        use: [
-          {
-            loader: 'html-loader',
-          },
-        ],
+        use: {
+          loader: 'html-loader',
+        },
       },
       {
         test: /\.(png|jpe?g|gif)$/i,
