@@ -1,3 +1,5 @@
+import './styles.css';
+
 class Popover {
     constructor(triggerElement, title, content) {
       this.triggerElement = triggerElement;
@@ -47,6 +49,6 @@ class Popover {
   
   document.addEventListener('DOMContentLoaded', () => {
     const button = document.querySelector('.popover-button');
-    new Popover(button, 'Popover Title', 'This is the popover content.');
+    new Popover(button, 'HA-HA-HA', 'это была ловушка джовушкера');
   });
   
