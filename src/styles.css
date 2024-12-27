@@ -6,14 +6,43 @@
     padding: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     z-index: 1000;
-  }
-  
-  .popover-header {
+    width: 200px;
+    text-align: center;
+}
+
+.popover::after {
+    content: '';
+    position: absolute;
+    bottom: -10px; 
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 10px;
+    border-style: solid;
+    border-color: #fff transparent transparent transparent;
+    z-index: 1001;
+}
+
+.popover::before {
+    content: '';
+    position: absolute;
+    bottom: -11px; 
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 11px;
+    border-style: solid;
+    border-color: #ccc transparent transparent transparent;
+    z-index: 1000;
+}
+
+.popover-header {
     font-weight: bold;
     margin-bottom: 5px;
-  }
-  
-  .popover-body {
+    font-size: 16px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+}
+
+.popover-body {
     font-size: 14px;
-  }
-  
+    padding-top: 5px;
+}
